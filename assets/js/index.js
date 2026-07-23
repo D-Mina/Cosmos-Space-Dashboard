@@ -50,7 +50,7 @@ async function loadAstronomyPictureOfTheDay(selectedDate = null) {
     document.getElementById("apod-explanation").textContent =
       apodData.explanation;
 
-   d("apod-copyright");
+    const copyrightElement = document.getElementById("apod-copyright");
     if (apodData.copyright) {
       copyrightElement.innerHTML = `<i class="fas fa-copyright mr-1"></i>Copyright: ${apodData.copyright.trim()}`;
       copyrightElement.classList.remove("hidden");
